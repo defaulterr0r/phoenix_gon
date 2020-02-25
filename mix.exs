@@ -3,14 +3,15 @@ defmodule PhoenixGon.Mixfile do
 
   def project do
     [
-      app: :phoenix_gon,
-      version: "0.4.0",
+      app: :phoenix_gon_fork,
+      version: "0.5.0",
       elixir: "~> 1.4",
       build_embedded: Mix.env() == :prod,
       start_permanent: Mix.env() == :prod,
       description: description(),
       package: package(),
-      deps: deps()
+      deps: deps(),
+      source_url: "https://github.com/defaulterr0r/phoenix_gon_fork"
     ]
   end
 
@@ -20,17 +21,18 @@ defmodule PhoenixGon.Mixfile do
 
   defp description do
     """
-    PhoenixGon hex - your Phoenix variables in your JavaScript.
+    PhoenixGonFork hex - your Phoenix variables in your JavaScript.
+    Without problems with releases now (because no Mix.env() check in runtime).
     """
   end
 
   defp package do
     [
-      name: :phoenix_gon,
+      name: :phoenix_gon_fork,
       files: ~w{lib} ++ ~w{mix.exs README.md},
-      maintainers: ["Marat Khusnetdinov"],
+      maintainers: ["defaulterr0r"],
       licenses: ["MIT"],
-      links: %{"GitHub" => "https://github.com/khusnetdinov/phoenix_gon"}
+      links: %{"GitHub" => "https://github.com/defaulterr0r/phoenix_gon_fork"}
     ]
   end
 
